@@ -1,6 +1,9 @@
 # Login-system
 User login setup for allowing user usage on a react xpress app
 
+to use clone into desired directory. run npm i and git init(git init to remove trackers if you don't have something that ignores nod_modules already)
+cd into client or backend and npm start
+
 
 steps
 - created repo and cloned it to pull .gitignore and readme as well as set upstream. 
