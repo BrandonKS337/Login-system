@@ -79,3 +79,9 @@ steps
     - just used for hashing password
 
     running out of time. update later on p3 atm and need to push past.
+
+*** to add new users to the database you need to do manually for now. 
+*** the session will create a table and generate but users will need a table created using sql info above. in the password space put in the hashed password
+to test it at the end type the username and 12345 because that is what the current password is taking in for all users created due to getPassword.js acting as our hashing component right now.
+Will expand this into an actual user login as I can but for now the login verification process is established!!!
+
