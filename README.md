@@ -55,3 +55,27 @@ steps
             }
             export {component_name}
     - most of the logical coding in this step is done inside the LoginForm. Input and Submit are very simple multi use components meant to just be tossed around and reused. The login form is going to be the general Home for the login experience so It is passing in all the checks and api calls from there as the other components render inside its container.
+- moving on to backend
+    - new folder
+    - in client directory run npm run build this will create a build folder. copy paste this into backend.
+    - npm init starts a new npm project
+        - changed entry point to main.js but this is something that can get swapped to Server.js or index.js depending on name preferences.
+    - dependencies
+        - bcrypt //hashes the user passwords
+        - npm i express
+        - npm i express-mysql-session //session store like modx for the frontend
+        - npm i express-session //this is for the session itself 
+        - npm i mysql //to connect to mysql database
+- create SQL database
+    - named it myapp
+    - create schema and create basic user table with something like this sql code here
+                CREATE TABLE `myapp`.`user` (
+                `id` INT NOT NULL AUTO_INCREMENT,
+                `username` VARCHAR(255) NOT NULL,
+                `password` VARCHAR(255) NOT NULL,
+                PRIMARY KEY (`id`)
+                );
+- create GenPassword to get bcrypt ready for usage.
+    - just used for hashing password
+
+    running out of time. update later on p3 atm and need to push past.

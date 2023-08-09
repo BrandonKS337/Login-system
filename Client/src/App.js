@@ -76,7 +76,7 @@ class App extends React.Component {
           <>
             <div className="app">
               <div className="container">
-                Welcome to the homepage {UserStore.username}!!
+                Welcome to the homepage {UserStore.userName}!!
                 {/* render submit button with props that it takes in. making this a separate component makes it reusable */}
                 <SubmitButton
                   text={"Log out"}
