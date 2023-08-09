@@ -44,3 +44,14 @@ steps
     - at bottom wrap the app component being exported in this observer to make app listen for changes in the UserStore.
           ex:   export default observer (App);
     - if you load server using "npm start" to deploy is it will render the LoginForm component but for a millisecond or two you will see the status change to the Loading rendering before coming back to Login form as the app monitors the observable state of user being logged in or not.
+- further built up the actual component contest for inputField, LoginForm and submitbutton.
+    - it is important to note that the templates I am using are older react coding. using class and extends react.component is old syntax. It is "more clear and easier to work with. Supposedly optimizes the performance as well.
+            function {component_name} {
+                return(
+                    <>
+                    rendered details
+                    </>
+                )
+            }
+            export {component_name}
+    - most of the logical coding in this step is done inside the LoginForm. Input and Submit are very simple multi use components meant to just be tossed around and reused. The login form is going to be the general Home for the login experience so It is passing in all the checks and api calls from there as the other components render inside its container.

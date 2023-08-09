@@ -1,8 +1,7 @@
 import React from "react";
-import { observer } from 'mobx-react'
+import { observer } from "mobx-react";
 import UserStore from "./stores/UserStore";
 import LoginForm from "./LoginForm";
-import InputField from "./InputField";
 import SubmitButton from "./SubmitButton";
 import "./App.css";
 
@@ -15,7 +14,7 @@ class App extends React.Component {
         method: "post",
         headers: {
           Accept: "application/json",
-          "Content-type": "application/json",
+          "Content-Type": "application/json",
         },
       });
 
@@ -43,7 +42,7 @@ class App extends React.Component {
         method: "post",
         headers: {
           Accept: "application/json",
-          "Content-type": "application/json",
+          "Content-Type": "application/json",
         },
       });
 
@@ -75,7 +74,7 @@ class App extends React.Component {
         return (
           //if user successfully logs in this renders below. pulls in username from login and then also renders submit button for logout purposes
           <>
-            <div className="app"> 
+            <div className="app">
               <div className="container">
                 Welcome to the homepage {UserStore.username}!!
                 {/* render submit button with props that it takes in. making this a separate component makes it reusable */}
@@ -91,9 +90,17 @@ class App extends React.Component {
         );
       }
 
-      return ( //if not logged in then this part will be returned rendering the LoginForm component
+      return (
+        //if not logged in then this part will be returned rendering the LoginForm component
         <div className="app">
           <div className="container">
+            
+            {/* <SubmitButton
+              text={"Log out"}
+              disabled={false}
+              onClick={() => this.doLogout()}
+              // this onClick being set as it is was done to set a callback function to run when the onClick event is triggered by user. aka it runs ".doLogout" from "here" thanks to this.doLogout()
+            /> */}
             <LoginForm />
           </div>
         </div>
@@ -102,4 +109,4 @@ class App extends React.Component {
   }
 }
 
-export default observer (App);
+export default observer(App);
